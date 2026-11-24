@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Bebes Hermanos! ",
+    "price": 30900,
+    "image": "Producto1",
+    "category": "Juguete"
+  },
+  {
+    "name": "Casita para muñecas Estilo antiguo ",
+    "price": 29000,
+    "image": "Producto2",
+    "category": "Juguete"
+  },
+  {
+    "name": "Casita para muñecas Estilo moderno ",
+    "price": 26000,
+    "image": "Producto3",
+    "category": "Juguete"
+  },
+  {
+    "name": "Interactivo bebes ",
+    "price": 12000,
+    "image": "Producto4",
+    "category": "Juguete"
+  },
+  {
+    "name": "Silla mesedora pequeña ",
+    "price": 14900,
+    "image": "Producto5",
+    "category": "Mueble"
+  },
+  {
+    "name": "Mochila escolar ",
+    "price": 16100,
+    "image": "Producto6",
+    "category": "Accesorio"
+  },
+  {
+    "name": "Muñecas LOL's ",
+    "price": 10900,
+    "image": "Producto7",
+    "category": "Juguete"
+  },
+  {
+    "name": "Ositos peluches! ",
+    "price": 39900,
+    "image": "Producto8",
+    "category": "Juguete"
+  },
+  {
+    "name": "Peluche bebe estrella ",
+    "price": 4900,
+    "image": "Producto9",
+    "category": "Juguete"
+  },
+  {
+    "name": "Peluche perro ",
+    "price": 6100,
+    "image": "Producto10",
+    "category": "Juguete"
+  },
+  {
+    "name": "Velador A1 ",
+    "price": 6470,
+    "image": "Producto11",
+    "category": "Mueble"
+  },
+  {
+    "name": "Vinilicos decorativos estrellas ",
+    "price": 4550,
+    "image": "Producto12",
+    "category": "Accesorios"
+  },
+  {
+    "name": "robot a control remoto",
+    "price": 60200,
+    "image": "Producto13",
+    "category": "Juguete"
+  },
+  {
+    "name": "Muñeca La serenita",
+    "price": 5890,
+    "image": "Producto14",
+    "category": "Juguete"
+  }
+]
