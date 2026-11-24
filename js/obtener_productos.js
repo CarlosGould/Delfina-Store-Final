@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return `
       <div class="col-md-3">
         <div class="card h-100 border-0 custom-card">
-          <img src="img/${image}.png" class="card-img-top" alt="${name}">
+          <img src="./img/${image}.png" class="card-img-top" alt="${name}">
           <div class="card-body">
             <h5 class="card-title">${name}</h5>
             <p class="card-text">Categoría: <strong>${category}</strong></p>
