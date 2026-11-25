@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-    <link rel="stylesheet" href=".\css\styles.css">
-    <link rel="stylesheet" href=".\css\contacto.css">
-    <link rel="stylesheet" href=".\css\home.css">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Delfina Store</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/contacto.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,144 +17,84 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-
-  <div class="header">
-  <div class="container">
-    <div class="navbar">
-      <div class="logo">
-        <a href="index.html"><img src=".\img\logopng.png" alt="Delfina Store" width="145px" /></a>
-      </div>
-      <nav>
-
-        <!-- Acceso a menues -->
-        <ul id="MenuItems">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="registro.html">Registro</a></li>
-        </ul>
-      </nav>
-    
-         </div>
-</div>
-</div>
-<!-- formulario de contacto -->
-
-<form
-  action="https://formspree.io/f/xqpkqpga"
-  class="fs-form fs-layout__2-column"
-  target="_top"
-  method="POST"
->
-  <div class="fs-field">
-    <label class="fs-label" for="name">Nombre Completo</label>
-    <input class="fs-input" id="name" name="name" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="phone-number">Número de Teléfono</label>
-    <input
-      class="fs-input"
-      id="phone-number"
-      name="phone-number"
-      placeholder="(XXX) XXX-XXXX"
-    />
-  </div>
-
-  <div class="fs-field">
-    <label class="fs-label" for="Department">Provincia</label>
-    <input class="fs-input" id="Department" name="Department" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="media-type">Pedido</label>
-    <select class="fs-select" id="media-type" name="media-type" required>
-      <option value="juguete">Juguete</option>
-      <option value="mueble">Mueble</option>
-      <option value="accesorio">Accesorio</option>
-    </select>
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="description">
-      Descripción del pedido solicitado
-    </label>
-    <textarea
-      class="fs-textarea"
-      id="description"
-      name="description"
-      required
-    ></textarea>
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="date">Fecha de Entrega</label>
-    <input class="fs-input" id="date" name="date" placeholder="MM-DD-YYYY" />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label">Método de Entrega Preferido</label>
-    <div class="fs-radio-group">
-      <div class="fs-radio-field">
-        <div class="fs-radio-wrapper">
-          <input
-            class="fs-radio"
-            id="delivery-method-email-attachment"
-            name="delivery-method"
-            required
-            type="radio"
-            value="email-attachment"
-          />
-        </div>
-        <div>
-          <label class="fs-label" for="delivery-method-email-attachment">
-            Envio a cargo del comprador.
-          </label>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="navbar">
+          <a class="logo" href="./index.html">
+            <img src="./img/logopng.png" alt="Delfina Store" width="145" />
+          </a>
+          <nav aria-label="Navegación principal">
+            <ul id="MenuItems">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./productos.html">Productos</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
+              <li><a href="./registro.html">Registro</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
-      <div class="fs-radio-field">
-        <div class="fs-radio-wrapper">
-          <input
-            class="fs-radio"
-            id="delivery-method-url"
-            name="delivery-method"
-            required
-            type="radio"
-            value="url"
-          />
-        </div>
-        <div>
-          <label class="fs-label" for="delivery-method-url">Retiro sucursal</label>
-        </div>
-      </div>
-      <div class="fs-radio-field">
-        <div class="fs-radio-wrapper">
-          <input
-            class="fs-radio"
-            id="delivery-method-physical-copy"
-            name="delivery-method"
-            required
-            type="radio"
-            value="physical-copy"
-          />
-        </div>
-        <div>
-          <label class="fs-label" for="delivery-method-physical-copy">
-            Envio a hogar.
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="comments">Cualquier Comentario Adicional</label>
-    <textarea class="fs-textarea" id="comments" name="comments"></textarea>
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Enviar</button>
-  </div>
-</form>
+    </header>
 
-         <div class="footer-col-4">
+    <main class="container my-5">
+      <h1>Contacto</h1>
+      <form
+        action="https://formspree.io/f/xqpkqpga"
+        class="fs-form fs-layout__2-column"
+        target="_top"
+        method="POST"
+      >
+        <div class="fs-field">
+          <label class="fs-label" for="name">Nombre Completo</label>
+          <input class="fs-input" id="name" name="name" required />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="email">Email</label>
+          <input class="fs-input" id="email" name="email" type="email" required />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="phone-number">Número de Teléfono</label>
+          <input class="fs-input" id="phone-number" name="phone-number" placeholder="(XXX) XXX-XXXX" />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="Department">Provincia</label>
+          <input class="fs-input" id="Department" name="Department" required />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="media-type">Pedido</label>
+          <select class="fs-select" id="media-type" name="media-type" required>
+            <option value="juguete">Juguete</option>
+            <option value="mueble">Mueble</option>
+            <option value="accesorio">Accesorio</option>
+          </select>
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="description">Descripción del pedido solicitado</label>
+          <textarea class="fs-textarea" id="description" name="description" required></textarea>
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="date">Fecha de Entrega</label>
+          <input class="fs-input" id="date" name="date" placeholder="MM-DD-YYYY" />
+        </div>
+        <fieldset class="fs-field">
+          <legend class="fs-label">Método de Entrega Preferido</legend>
+          <label><input name="delivery-method" required type="radio" value="buyer-shipping" /> Envío a cargo del comprador</label>
+          <label><input name="delivery-method" type="radio" value="store-pickup" /> Retiro sucursal</label>
+          <label><input name="delivery-method" type="radio" value="home-delivery" /> Envío a domicilio</label>
+        </fieldset>
+        <div class="fs-field">
+          <label class="fs-label" for="comments">Cualquier Comentario Adicional</label>
+          <textarea class="fs-textarea" id="comments" name="comments"></textarea>
+        </div>
+        <div class="fs-button-group">
+          <button class="fs-button" type="submit">Enviar</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="container">
+      <div class="footer-col-4">
         <h3>Siguenos en nuestras redes!!</h3>
         <ul>
           <li>Facebook</li>
@@ -159,8 +103,8 @@
           <li>YouTube</li>
         </ul>
       </div>
-    </div>
-    <hr />
-    <p class="copyright">TalentoTech &copy; Carlos Gould</p>
-  </div>
-</div>
+      <hr />
+      <p class="copyright">TalentoTech &copy; Carlos Gould</p>
+    </footer>
+  </body>
+</html>
