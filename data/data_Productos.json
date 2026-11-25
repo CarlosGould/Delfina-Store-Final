@@ -2,85 +2,85 @@
   {
     "name": "Bebes Hermanos! ",
     "price": 30900,
-    "image": "Producto1",
+    "image": "producto1.PNG",
     "category": "Juguete"
   },
   {
     "name": "Casita para muñecas Estilo antiguo ",
     "price": 29000,
-    "image": "Producto2",
+    "image": "producto2.PNG",
     "category": "Juguete"
   },
   {
     "name": "Casita para muñecas Estilo moderno ",
     "price": 26000,
-    "image": "Producto3",
+    "image": "producto3.png",
     "category": "Juguete"
   },
   {
     "name": "Interactivo bebes ",
     "price": 12000,
-    "image": "Producto4",
+    "image": "producto4.PNG",
     "category": "Juguete"
   },
   {
     "name": "Silla mesedora pequeña ",
     "price": 14900,
-    "image": "Producto5",
+    "image": "producto5.PNG",
     "category": "Mueble"
   },
   {
     "name": "Mochila escolar ",
     "price": 16100,
-    "image": "Producto6",
+    "image": "producto6.PNG",
     "category": "Accesorio"
   },
   {
     "name": "Muñecas LOL's ",
     "price": 10900,
-    "image": "Producto7",
+    "image": "producto7.PNG",
     "category": "Juguete"
   },
   {
     "name": "Ositos peluches! ",
     "price": 39900,
-    "image": "Producto8",
+    "image": "producto8.PNG",
     "category": "Juguete"
   },
   {
     "name": "Peluche bebe estrella ",
     "price": 4900,
-    "image": "Producto9",
+    "image": "producto9.PNG",
     "category": "Juguete"
   },
   {
     "name": "Peluche perro ",
     "price": 6100,
-    "image": "Producto10",
+    "image": "producto10.PNG",
     "category": "Juguete"
   },
   {
     "name": "Velador A1 ",
     "price": 6470,
-    "image": "Producto11",
+    "image": "producto11.png",
     "category": "Mueble"
   },
   {
     "name": "Vinilicos decorativos estrellas ",
     "price": 4550,
-    "image": "Producto12",
+    "image": "producto12.png",
     "category": "Accesorios"
   },
   {
     "name": "robot a control remoto",
     "price": 60200,
-    "image": "Producto13",
+    "image": "producto13.PNG",
     "category": "Juguete"
   },
   {
     "name": "Muñeca La serenita",
     "price": 5890,
-    "image": "Producto14",
+    "image": "producto14.PNG",
     "category": "Juguete"
   }
 ]

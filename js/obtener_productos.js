@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("productos-container");
 
-  // Función para crear una tarjeta HTML
+  if (!container) return;
+
   function createProductosCard({ name, price, image, category }) {
     return `
-      <div class="col-md-3">
+      <div class="col-12 col-sm-6 col-lg-3">
         <div class="card h-100 border-0 custom-card">
-          <img src="./img/${image}.png" class="card-img-top" alt="${name}">
-          <div class="card-body">
-            <h5 class="card-title">${name}</h5>
+          <img src="./img/${image}" class="card-img-top" alt="${name}" loading="lazy">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">${name}</h2>
             <p class="card-text">Categoría: <strong>${category}</strong></p>
-            <p class="card-text">Precio: <strong class="price">$${price.toFixed(2)}</strong></p>
-            
-            <button class="btn btn-cart w-100 mt-auto">
-                Agregar al carrito &nbsp; <i class="bi bi-cart-plus"></i>
+            <p class="card-text">Precio: <strong class="price">$${Number(price).toFixed(2)}</strong></p>
+            <button class="btn btn-cart w-100 mt-auto" type="button">
+              Agregar al carrito &nbsp; <i class="bi bi-cart-plus"></i>
             </button>
           </div>
         </div>
@@ -21,33 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  // Función para cargar los datos
   async function loadProductos() {
     try {
       const response = await fetch("./data/data_Productos.json");
-
       if (!response.ok) {
-        throw new Error("Error al cargar los datos");
+        throw new Error(`No se pudo cargar data/data_Productos.json (${response.status})`);
       }
 
-      const productos = await response.json(); // Parsear el JSON
+      const productos = await response.json();
+      container.innerHTML = productos.map(createProductosCard).join("");
 
-      /**
-       * Renderizar las tarjetas
-       * productos.map(createProductoCard).join("")
-       * Usamos el método map del array productos para recorrer cada objeto dentro del array.
-       * Por cada objeto, llama a la función createProductoCard, pasando el objeto como argumento.
-       * .join("") Toma el nuevo array de cadenas HTML generado por map y las une en una sola cadena,
-       * asegurando qque las cadenas se concatenen sin separadores entre ellas
-       */
-      const productoCards = productos.map((producto) => createProductosCard(producto)).join("");
-      container.innerHTML = productoCards;
+      // Mostrar un mensaje si alguna ruta de imagen no coincide con un archivo existente.
+      container.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("error", () => {
+          console.error(`No se pudo cargar la imagen: ${img.getAttribute("src")}`);
+          img.alt = `Imagen no disponible: ${img.alt}`;
+        }, { once: true });
+      });
     } catch (error) {
-      console.error("Error al cargar los datos:", error);
-      container.innerHTML = `<p class="text-danger text-center">Hubo un error al cargar los datos.</p>`;
+      console.error("Error al cargar los productos:", error);
+      container.innerHTML = '<p class="text-danger text-center">No se pudieron cargar los productos. Revisa la consola del navegador.</p>';
     }
   }
 
-  // Cargar los datos al cargar la página
   loadProductos();
 });
