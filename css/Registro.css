@@ -1,111 +1,46 @@
-/* Registration form */
-:root {
-  --color-background: #cbd5e1;
-  --color-background-alt: #8ec6ff;
-  --color-border-active: #173db6;
-  --color-border-default: #94a3b8;
-  --color-highlight: #8ec6ff;
-  --color-primary: #144be1;
-  --color-primary-active: #19388f;
-  --color-text-default: #0f172a;
-  --color-text-muted: #475569;
-  --font-family-body: "Inter", system-ui, sans-serif;
-  --font-family-display: "Inter", system-ui, sans-serif;
+/* Page-specific enhancements; form controls and responsive grid use Bootstrap. */
+.registro-page {
+  --registro-primary: #144be1;
+  --registro-primary-hover: #19388f;
 }
 
-#Registro .fs-form {
-  display: grid;
+.registro-card {
   max-width: 680px;
-  gap: 1.25rem;
-}
-
-#Registro .fs-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-}
-
-#Registro .fs-label {
-  color: var(--color-text-default);
-  font-family: var(--font-family-display);
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-#Registro .fs-description {
-  margin: 0.2rem 0 0;
-  color: var(--color-text-muted);
-  font-size: 0.875rem;
-  line-height: 1.45;
-}
-
-#Registro .fs-input {
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.65rem 0.75rem;
-  border: 1px solid var(--color-border-default);
-  border-radius: 0.375rem;
-  background: #fff;
-  color: var(--color-text-default);
-  font: inherit;
-}
-
-#Registro .fs-input:focus-visible {
-  border-color: var(--color-border-active);
-  outline: 3px solid var(--color-highlight);
-  outline-offset: 1px;
-}
-
-#Registro .fs-checkbox-field {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-#Registro .fs-checkbox {
-  flex: 0 0 auto;
-  width: 1.1rem;
-  height: 1.1rem;
-  margin-top: 0.15rem;
-  accent-color: var(--color-primary);
-}
-
-#Registro .fs-checkbox:focus-visible {
-  outline: 3px solid var(--color-highlight);
-  outline-offset: 2px;
-}
-
-#Registro .fs-button-group {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#Registro .fs-button {
-  min-height: 2.75rem;
-  padding: 0.75rem 1.5rem;
   border: 0;
-  border-radius: 0.375rem;
-  background: var(--color-primary);
-  color: #fff;
-  font: inherit;
+  border-radius: 1rem;
+}
+
+.registro-card .card-body {
+  border-radius: inherit;
+}
+
+.registro-card .form-label {
+  color: #0f172a;
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-#Registro .fs-button:hover,
-#Registro .fs-button:focus-visible {
-  background: var(--color-primary-active);
+.registro-card .form-control:focus,
+.registro-card .form-check-input:focus {
+  border-color: var(--registro-primary);
+  box-shadow: 0 0 0 0.25rem rgb(142 198 255 / 45%);
 }
 
-#Registro .fs-button:focus-visible {
-  outline: 3px solid var(--color-highlight);
-  outline-offset: 2px;
+.registro-card .form-check-input:checked {
+  border-color: var(--registro-primary);
+  background-color: var(--registro-primary);
 }
 
-@media (max-width: 640px) {
-  #Registro .fs-form {
-    width: 100%;
-  }
+.btn-registro {
+  min-height: 2.75rem;
+  border-color: var(--registro-primary);
+  background-color: var(--registro-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-registro:hover,
+.btn-registro:focus-visible {
+  border-color: var(--registro-primary-hover);
+  background-color: var(--registro-primary-hover);
+  color: #fff;
 }

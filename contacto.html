@@ -12,11 +12,6 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/contacto.css" />
-    <link rel="stylesheet" href="./css/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
   </head>
   <body>
     <header class="header">
@@ -26,76 +21,89 @@
             <img src="./img/logopng.png" alt="Delfina Store" width="145" />
           </a>
           <nav aria-label="Navegación principal">
-            <ul id="MenuItems">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./productos.html">Productos</a></li>
-              <li><a href="./contacto.html">Contacto</a></li>
-              <li><a href="./registro.html">Registro</a></li>
+            <ul id="MenuItems" class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="./registro.html">Registro</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main class="container my-5">
-      <h1>Contacto</h1>
-      <form
-        action="https://formspree.io/f/xqpkqpga"
-        class="fs-form fs-layout__2-column"
-        target="_top"
-        method="POST"
-      >
-        <div class="fs-field">
-          <label class="fs-label" for="name">Nombre Completo</label>
-          <input class="fs-input" id="name" name="name" required />
+    <main class="container py-5 contacto-page">
+      <section class="contacto-card card shadow-sm mx-auto">
+        <div class="card-body p-4 p-md-5">
+          <h1 class="card-title h2 mb-2">Contacto</h1>
+          <p class="text-secondary mb-4">Completa el formulario y nos pondremos en contacto contigo.</p>
+
+          <form action="https://formspree.io/f/xqpkqpga" target="_top" method="POST" class="row g-3">
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="name">Nombre completo</label>
+              <input class="form-control" id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="email">Correo electrónico</label>
+              <input class="form-control" id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="phone-number">Número de teléfono</label>
+              <input class="form-control" id="phone-number" name="phone-number" type="tel" autocomplete="tel" placeholder="(XXX) XXX-XXXX" />
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="Department">Provincia</label>
+              <input class="form-control" id="Department" name="Department" type="text" autocomplete="address-level1" required />
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="media-type">Tipo de pedido</label>
+              <select class="form-select" id="media-type" name="media-type" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="juguete">Juguete</option>
+                <option value="mueble">Mueble</option>
+                <option value="accesorio">Accesorio</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="date">Fecha de entrega preferida</label>
+              <input class="form-control" id="date" name="date" type="date" />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="description">Descripción del pedido</label>
+              <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+            </div>
+            <fieldset class="col-12">
+              <legend class="fs-6 fw-semibold">Método de entrega preferido</legend>
+              <div class="d-flex flex-column flex-sm-row flex-wrap gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" id="buyer-shipping" name="delivery-method" type="radio" value="buyer-shipping" required />
+                  <label class="form-check-label" for="buyer-shipping">Envío a cargo del comprador</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="store-pickup" name="delivery-method" type="radio" value="store-pickup" />
+                  <label class="form-check-label" for="store-pickup">Retiro en sucursal</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" id="home-delivery" name="delivery-method" type="radio" value="home-delivery" />
+                  <label class="form-check-label" for="home-delivery">Envío a domicilio</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="col-12">
+              <label class="form-label" for="comments">Comentarios adicionales</label>
+              <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+            </div>
+            <div class="col-12 d-grid d-sm-flex justify-content-sm-end mt-4">
+              <button class="btn btn-contacto px-4" type="submit">Enviar consulta</button>
+            </div>
+          </form>
         </div>
-        <div class="fs-field">
-          <label class="fs-label" for="email">Email</label>
-          <input class="fs-input" id="email" name="email" type="email" required />
-        </div>
-        <div class="fs-field">
-          <label class="fs-label" for="phone-number">Número de Teléfono</label>
-          <input class="fs-input" id="phone-number" name="phone-number" placeholder="(XXX) XXX-XXXX" />
-        </div>
-        <div class="fs-field">
-          <label class="fs-label" for="Department">Provincia</label>
-          <input class="fs-input" id="Department" name="Department" required />
-        </div>
-        <div class="fs-field">
-          <label class="fs-label" for="media-type">Pedido</label>
-          <select class="fs-select" id="media-type" name="media-type" required>
-            <option value="juguete">Juguete</option>
-            <option value="mueble">Mueble</option>
-            <option value="accesorio">Accesorio</option>
-          </select>
-        </div>
-        <div class="fs-field">
-          <label class="fs-label" for="description">Descripción del pedido solicitado</label>
-          <textarea class="fs-textarea" id="description" name="description" required></textarea>
-        </div>
-        <div class="fs-field">
-          <label class="fs-label" for="date">Fecha de Entrega</label>
-          <input class="fs-input" id="date" name="date" placeholder="MM-DD-YYYY" />
-        </div>
-        <fieldset class="fs-field">
-          <legend class="fs-label">Método de Entrega Preferido</legend>
-          <label><input name="delivery-method" required type="radio" value="buyer-shipping" /> Envío a cargo del comprador</label>
-          <label><input name="delivery-method" type="radio" value="store-pickup" /> Retiro sucursal</label>
-          <label><input name="delivery-method" type="radio" value="home-delivery" /> Envío a domicilio</label>
-        </fieldset>
-        <div class="fs-field">
-          <label class="fs-label" for="comments">Cualquier Comentario Adicional</label>
-          <textarea class="fs-textarea" id="comments" name="comments"></textarea>
-        </div>
-        <div class="fs-button-group">
-          <button class="fs-button" type="submit">Enviar</button>
-        </div>
-      </form>
+      </section>
     </main>
 
     <footer class="container">
       <div class="footer-col-4">
-        <h3>Siguenos en nuestras redes!!</h3>
+        <h3>Síguenos en nuestras redes</h3>
         <ul>
           <li>Facebook</li>
           <li>Twitter</li>

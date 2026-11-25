@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro - Delfina Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/Registro.css" />
-    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
     <header class="header">
@@ -16,53 +21,57 @@
             <img src="./img/logopng.png" alt="Delfina Store" width="145" />
           </a>
           <nav aria-label="Navegación principal">
-            <ul id="MenuItems">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./productos.html">Productos</a></li>
-              <li><a href="./contacto.html">Contacto</a></li>
-              <li><a href="./registro.html">Registro</a></li>
+            <ul id="MenuItems" class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="./registro.html">Registro</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main class="container my-5">
-      <h1>Registro de suscripción</h1>
-      <section id="Registro">
-        <form action="https://formspree.io/f/mjywjpgw" class="fs-form" target="_top" method="POST">
-          <div class="fs-field">
-            <label class="fs-label" for="full-name">Nombre Completo</label>
-            <input class="fs-input" id="full-name" name="full-name" placeholder="Ingrese su nombre completo" />
-          </div>
-          <div class="fs-field">
-            <label class="fs-label" for="email-address">Dirección de Email</label>
-            <input class="fs-input" id="email-address" name="email-address" type="email" placeholder="Ingrese su dirección de email" required />
-          </div>
-          <div class="fs-checkbox-field">
-            <input aria-describedby="newsletter-consent-description" class="fs-checkbox" id="newsletter-consent" name="newsletter-consent" required type="checkbox" value="yes" />
-            <div>
-              <label class="fs-label" for="newsletter-consent">Consentimiento para recibir publicidad y promociones.</label>
-              <p class="fs-description" id="newsletter-consent-description">Acepto recibir publicidad y promociones de Delfina Store.</p>
+    <main class="container py-5 registro-page">
+      <section class="registro-card card shadow-sm mx-auto">
+        <div class="card-body p-4 p-md-5">
+          <h1 class="card-title h2 mb-2">Registro de suscripción</h1>
+          <p class="text-secondary mb-4">Suscríbete para recibir novedades, promociones y noticias de Delfina Store.</p>
+
+          <form action="https://formspree.io/f/mjywjpgw" target="_top" method="POST" class="row g-3">
+            <div class="col-12">
+              <label class="form-label" for="full-name">Nombre completo</label>
+              <input class="form-control" id="full-name" name="full-name" type="text" autocomplete="name" placeholder="Ingresa tu nombre completo" required />
             </div>
-          </div>
-          <div class="fs-checkbox-field">
-            <input aria-describedby="privacy-policy-agreement-description" class="fs-checkbox" id="privacy-policy-agreement" name="privacy-policy-agreement" required type="checkbox" value="yes" />
-            <div>
-              <label class="fs-label" for="privacy-policy-agreement">Acepto la Política de Privacidad</label>
-              <p class="fs-description" id="privacy-policy-agreement-description">He leído y acepto la Política de Privacidad.</p>
+            <div class="col-12">
+              <label class="form-label" for="email-address">Correo electrónico</label>
+              <input class="form-control" id="email-address" name="email-address" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" required />
             </div>
-          </div>
-          <div class="fs-button-group">
-            <button class="fs-button" type="submit">Subscribirse</button>
-          </div>
-        </form>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" id="newsletter-consent" name="newsletter-consent" type="checkbox" value="yes" aria-describedby="newsletter-consent-description" required />
+                <label class="form-check-label fw-semibold" for="newsletter-consent">Acepto recibir publicidad y promociones</label>
+                <div class="form-text" id="newsletter-consent-description">Puedes cancelar la suscripción cuando quieras.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" id="privacy-policy-agreement" name="privacy-policy-agreement" type="checkbox" value="yes" aria-describedby="privacy-policy-agreement-description" required />
+                <label class="form-check-label fw-semibold" for="privacy-policy-agreement">Acepto la Política de Privacidad</label>
+                <div class="form-text" id="privacy-policy-agreement-description">He leído y acepto la Política de Privacidad de Delfina Store.</div>
+              </div>
+            </div>
+            <div class="col-12 d-grid mt-4">
+              <button class="btn btn-registro" type="submit">Suscribirme</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="container">
       <div class="footer-col-4">
-        <h3>Siguenos en nuestras redes!!</h3>
+        <h3>Síguenos en nuestras redes</h3>
         <ul>
           <li>Facebook</li>
           <li>Twitter</li>
